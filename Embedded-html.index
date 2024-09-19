@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle of the Realm</title>
+    <style>
+      body {
+        width: 100vw;
+        background-color: black;
+        color: aliceblue;
+      }
+
+      #game {
+        max-width: 600px;
+        max-height: 500px;
+        background: linear-gradient(to top right, red 10%, yellow);
+        padding: 30px;
+        border-radius: 20px;
+        margin: 2rem auto 0;
+      }
+
+      #stats,
+      #control {
+        border: 2px solid white;
+        padding: 5px;
+        margin: 5px;
+      }
+      #monsterStats {
+        display: none;
+        padding: 5px;
+        color: #ffffff;
+        background-color: #090808;
+        margin: 5px;
+      }
+      #text {
+        background-color: rgb(14, 4, 1);
+        margin: 5px;
+        padding: 5px;
+        text-align: justify;
+      }
+      .stat {
+        padding: 10px;
+      }
+      .header {
+        text-align: center;
+        margin: 15rem auto 0;
+      }
+      .header h1 {
+        font-size: 3em;
+        color: #fff;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      button {
+        cursor: pointer;
+        color: rgb(249, 249, 249);
+        background: linear-gradient(to left bottom, black 80%, white);
+        padding: 5px;
+        border: 1px solid #faf8f5;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+      button:hover {
+        background: linear-gradient(to right top, #333 80%, #ddd);
+        color: #faf8f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Battle of the Realm</h1>
+    </div>
+    <div id="game">
+      <div id="stats">
+        <span class="stat"
+          >XP: <strong><span id="xpText">0</span></strong></span
+        >
+        <span class="stat"
+          >Health: <strong><span id="healthText">100</span></strong></span
+        >
+        <span class="stat"
+          >Gold: <strong><span id="goldText">50</span></strong></span
+        >
+      </div>
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3">Fight dragon</button>
+      </div>
+      <div id="monsterStats">
+        <span class="stat"
+          >Monster Name: <strong><span id="monsterName"></span></strong
+        ></span>
+        <span class="stat"
+          >Health: <strong><span id="monsterHealth"></span></strong
+        ></span>
+      </div>
+      <div id="text">
+        Welcome to Dragon Repeller. You must defeat the dragon that is
+        preventing people from leaving the town. You are in the town square.
+        Where do you want to go? Use the buttons above.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
